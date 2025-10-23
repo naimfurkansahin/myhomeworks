@@ -26,11 +26,13 @@ if __name__ == "__main__":
              print(f"{isim} rehbere eklendi.")
 
         elif secim == "ara":
-            ara = input("Kişi ismi giriniz: ")
-            if ara in telefon_rehberi:
-             print(f"{ara} numarası: {telefon_rehberi[ara]}")
+            ara = input("İsim veya ismin bir kısmını giriniz: ").lower()
+            bulunanlar = {isim: num for isim, num in telefon_rehberi.items() if ara in isim.lower()}
+            if bulunanlar:
+                for isim, num in bulunanlar.items():
+                    print(f"{isim}: {num}")
             else:
-             print("Rehberde böyle bir kişi yok.")
+                print("Eşleşen kişi bulunamadı.")
 
         elif secim == "sil":
             sil = input("Silmek istediğiniz kişinin ismi: ")
