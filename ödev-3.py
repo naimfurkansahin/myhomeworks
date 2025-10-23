@@ -10,7 +10,7 @@ if __name__ == "__main__":
     telefon_rehberi = {}
 
     while True:
-        secim = input("Seçiminiz. (ekle/ara/sil/listele/çık)")
+        secim = input("Seçiminiz. (ekle/ara/sil/listele/güncelle/çık)")
         if secim == "çık":
             break
 
@@ -39,6 +39,16 @@ if __name__ == "__main__":
                print(f"{sil} rehberden silindi.")
             else:
                print("Rehberde", sil, "adında birisi yok.")
+
+        elif secim == "güncelle":
+            isim = input("Numarasını güncellemek istediğiniz kişinin ismi: ")
+            if isim in telefon_rehberi:
+                yeni_numara = input("Yeni numarayı giriniz: ")
+                telefon_rehberi[isim] = yeni_numara
+                print(f"{isim} adlı kişinin numarası güncellendi.")
+            else:
+                print("Rehberde böyle bir kişi yok.")
+
 
         elif secim == "listele":
             if not telefon_rehberi:
