@@ -33,14 +33,14 @@ if __name__ == "__main__":
             not_metni = input("Notunuzu yazın: ")
             with open("notlar.txt", "a", encoding="utf-8") as dosya:
                 dosya.write(not_metni + "\n")
-            print("✅ Not eklendi.")
+            print("Not eklendi.")
 
         # DONE[4]: "listele" seçilince dosyadaki tüm notları ekrana yazdırın
         elif secim == "2":
             with open("notlar.txt", "r", encoding="utf-8") as dosya:
                 notlar = dosya.readlines()
             if not notlar:
-                print("📂 Henüz hiç not yok.")
+                print("Henüz hiç not yok.")
             else:
                 print("\n--- KAYITLI NOTLAR ---")
                 for i, n in enumerate(notlar, start=1):
@@ -67,7 +67,7 @@ if __name__ == "__main__":
                     silinen = notlar.pop(sil_no - 1)
                     with open("notlar.txt", "w", encoding="utf-8") as dosya:
                         dosya.writelines(notlar)
-                    print(f"🗑️ '{silinen.strip()}' notu silindi.")
+                    print(f"'{silinen.strip()}' notu silindi.")
                 else:
                     print("Geçersiz numara!")
             except ValueError:
@@ -78,13 +78,13 @@ if __name__ == "__main__":
             onay = input("Tüm notlar silinecek! Emin misiniz? (e/h): ")
             if onay.lower() == "e":
                 open("notlar.txt", "w").close()
-                print("📁 Tüm notlar temizlendi.")
+                print("Tüm notlar temizlendi.")
             else:
                 print("İşlem iptal edildi.")
 
         elif secim == "5":
-            print("👋 Not defteri kapatılıyor...")
+            print("Not defteri kapatılıyor...")
             break
 
         else:
-            print("⚠️ Geçersiz seçim! Lütfen 1-5 arasında bir değer girin.")
+            print("Geçersiz seçim! Lütfen 1-5 arasında bir değer girin.")
