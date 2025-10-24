@@ -1,9 +1,6 @@
-'''
-yazan : nAİm
-16.10.2025
-    bu dördüncü ödevim not defteri yapıyorum.
 
-'''
+# nAİm
+# 16.10.2025
 
 import os
 

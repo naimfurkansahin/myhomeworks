@@ -1,9 +1,8 @@
-'''
-yazan : nAİm
-16.10.2025
-    bu ödevimde liste ve for döngüleri kullanarak arayüzlü bir üye kayıt uygulaması
-    hazırlayacağım.
-'''
+
+# nAİm
+# 16.10.2025
+# arayüzlü bir üye kayıt uygulaması
+
 
 if __name__ == "__main__":
     baslik = "Üye Kayıt Sistemi"

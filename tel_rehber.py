@@ -1,9 +1,8 @@
-'''
-yazan : nAİm
-16.10.2025
-    bu üçüncü ödevim telefon rehberi yapıyorum.
 
-'''
+# nAİm
+# 16.10.2025
+# telefon rehberi
+    
 import json
 import os
 

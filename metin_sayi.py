@@ -1,9 +1,7 @@
-'''
-yazan : nAİm
-16.10.2025
-    bu ilk ödevim kodlarimin amaci herhangi bir metindeki en çok tekrar eden kelimeleri
-    bulmak.
-'''
+# nAİm
+# 16.10.2025
+# herhangi bir metindeki en çok tekrar eden kelimeleri bulmak.
+
 
 if __name__ == "__main__":
  from collections import Counter

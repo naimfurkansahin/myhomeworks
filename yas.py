@@ -1,9 +1,7 @@
-'''
-yazan : nAİm
-16.10.2025
-    bu ikinci ödevim kulanıcıdan yaş alıp onu kategorilendirmek.
 
-'''
+# nAİm
+# 16.10.2025
+
 
 if __name__ == "__main__":
     # Ödev 2: Yaş Kontrolü
