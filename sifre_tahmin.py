@@ -1,4 +1,7 @@
-# Mastermind tarzı: 4 haneli sayı tahmin oyunu
+#nAİm
+#25.10.2025
+#basit şifre oyunu
+
 import random
 from collections import Counter
 
@@ -7,11 +10,8 @@ def yeni_sayi_uret():
     return f"{random.randint(0, 9999):04d}"
 
 def geri_bildirim(sifre, tahmin):
-    # doğru pozisyon sayısı
     dogru_pozisyon = sum(1 for s, t in zip(sifre, tahmin) if s == t)
-    # pozisyon bağımsız ortak rakam sayısı (tekrarları doğru saymak için Counter kullan)
     ortak = sum((Counter(sifre) & Counter(tahmin)).values())
-    # doğru rakam ama yanlış pozisyon = ortak - doğru_pozisyon
     dogru_rakam_yanlis_yer = ortak - dogru_pozisyon
     return dogru_pozisyon, dogru_rakam_yanlis_yer
 
@@ -22,7 +22,6 @@ def oyun():
     print("Çıkmak için 'q' yaz.\n")
 
     sifre = yeni_sayi_uret()
-    # test/debug için istersen şu satırı aç: print("DEBUG:", sifre)
 
     deneme_sayisi = 0
     while True:
@@ -32,7 +31,6 @@ def oyun():
                 print("Oyundan çıkılıyor. Doğru sayı:", sifre)
                 break
 
-            # input doğrulama
             if not (tahmin.isdigit() and len(tahmin) == 4):
                 print("Hata: Lütfen 4 haneli bir sayı gir (ör. 0427).")
                 continue
